@@ -1,0 +1,207 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-ExtraBold.ttf);
+}
+
+.pantallaFinal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 20000;
+    background: #1e1d24;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(-120%);
+    pointer-events: none;
+    transition: .5s ease;
+}
+
+.aparecerPantallaFinal {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+    transition: .5s ease;
+}
+
+
+.pantallaFinal h2 {
+    font-size: 30px;
+    font-family: MikadoBold;
+    margin: 0;
+}
+
+.pantallaFinal .usuario {
+    padding: 5px 15px;
+    background: rgb(110, 110, 110);
+    border-radius: 50px;
+    margin: 10px 0 15px 0;
+}
+
+.estadistica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 60px);
+    padding: 10px 30px;
+    gap: 15px;
+}
+
+.progreso {
+    background: #ffffffe1;
+    color: #1f1f1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-family: MikadoBold;
+    width: calc(100% - 40px);
+    padding: 0 20px;
+    border-radius: 8px;
+    gap: 10px;
+}
+
+.progreso__texto {
+    opacity: 0;
+    transition: .3s ease;
+}
+
+.aparecerTextoProgreso {
+    opacity: 1;
+    transition: .3s ease;
+}
+
+.detalles {
+    width: calc(100% - 40px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    background: #ffffffb4;
+    color: rgb(41, 41, 41);
+}
+
+.detalles p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Para animar las estadisticas */
+.progreso, .detalles {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: .3s ease-in-out;
+}
+.estadisticaMostrar {
+    opacity: 1;
+    transform: translateY(0);
+    transition: .5s ease;
+}
+
+.aciertos { color: #25c1a3; background: #25c1a3; }
+.fallos { color: #ff3c2e; background: #ff3c2e;}
+.sinTiempo { color: #db8828; background: #db8828; }
+
+.numeroEst {
+    font-family: MikadoBold;
+    font-size: 22px;
+    text-shadow: 0 1px #e4e4e4dc;
+    background: none;
+}
+
+.detalles .iconoCorreccion {
+    padding: 0;
+    width: 30px;
+    height: 30px;
+}
+
+#progreso-correcto {
+    width: 60px;
+    height: 60px;
+    position: relative !important;
+    transition: .3s ease !important;
+}
+
+.progress-text {
+    font-family: Montserrat !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    font-size: 16px;
+}
+
+.botonesFinal {
+    width: calc(100% - 60px);
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.botonExportar, .botonReiniciarJuego {
+    margin: 15px 0 0 0;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-family: MikadoBold;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    text-shadow: 3px 1px #000000ab;
+    background: #fd9802;
+    box-shadow: 0 5px #b03a0e;
+    cursor: pointer;
+    transition: .1s ease;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(100%);
+}
+
+.botonReiniciarJuego {
+    background: #892fff;
+    box-shadow: 0 5px #4c0f9b;
+}
+
+.botonExportar svg, .botonReiniciarJuego svg {
+    width: 28px;
+    margin-right: 5px;
+    fill: #fff;
+    filter: drop-shadow(3px 1px #000000ab);
+}
+
+.botonExportar p {
+    margin: 0;
+}
+
+.botonExportar:hover, .botonReiniciarJuego:hover {
+    transform: translateY(5px);
+    box-shadow: none;
+}
+
+.botonExportar:active, .botonReiniciarJuego:active {
+    opacity: 75%;
+}
+
+.aparecerbotonExportar {
+    opacity: 1;
+    transform: translateY(0);
+    transition: .3s ease;
+    pointer-events: all;
+}
