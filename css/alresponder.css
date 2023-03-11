@@ -1,0 +1,60 @@
+.opcion:is(.botonCorrecto, .botonIncorrecto, .botonSinTiempo) {
+    box-shadow: none;
+}
+
+.botonCorrecto::before {
+    background: #25c1a3;
+}
+
+.botonIncorrecto::before {
+    background: #ff3c2e;
+}
+
+.botonSinTiempo::before {
+    background: #db8828;
+}
+
+.deshabilitar {
+    pointer-events: none !important;
+}
+
+.tiempoFuera {
+    margin-right: -50px;
+    transition: .3s ease;
+}
+
+.correccion {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transform-origin: center;
+    transform: scale(0);
+    transition: .3s ease;
+}
+
+.iconoCorreccion {
+    width: 40px;
+    height: 40px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    padding: 7px;
+}
+
+.iconoCorreccion box-icon {
+    fill: #fff;
+}
+
+.mostrarCorrecion {
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: all;
+}

@@ -1,0 +1,42 @@
+@media screen and (max-width:960px) {
+  h1 {
+    display: none;
+  }
+}
+
+@media screen and (max-width:550px) {
+  header {
+    z-index: 10000;
+    top: 1vh;
+    left: 1vh;
+  }
+
+  .celular {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    border-radius: 0;
+    min-width: 310px;
+  }
+
+  .celular__lineaArriba {
+    display: none;
+  }
+
+  .celular__contenido {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .categoria {
+    background: #2155e471;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.226);
+  }
+
+  .pantallaInicio {
+    background: none;
+  }
+}
